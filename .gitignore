@@ -1,0 +1,14 @@
+/test/images/**
+/test/masks/**
+
+/train/images/**
+/train/masks/**
+
+/data/images/**
+/data/masks/**
+.DS_Store
+
+# *.jpg
+
+*ipynb_checkpoints
+__pycache__
