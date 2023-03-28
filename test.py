@@ -5,7 +5,7 @@ from tqdm import tqdm
 import torch
 from sklearn.metrics import accuracy_score, f1_score, jaccard_score, precision_score, recall_score
 import matplotlib.pyplot as plt
-from Model import build_unet
+from Model import UNET
 from data_loader import loader
 
 def calculate_metrics(y_true, y_pred):
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    model = build_unet(n_classes)
+    model = UNET(n_classes)
     model = model.to(device)
     model.load_state_dict(torch.load(checkpoint_path, map_location=device))
     model.eval()
