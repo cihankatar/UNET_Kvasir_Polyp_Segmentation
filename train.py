@@ -17,7 +17,7 @@ def main():
     n_classes   = 1
     batch_size  = 2
     num_workers = 2
-    epochs      = 20
+    epochs      = 50
     l_r         = 0.001
 
     # Defining model and training options
@@ -62,7 +62,7 @@ def main():
             train_loss.backward()
             optimizer.step()
 
-            print(f"batch loss = {train_loss}")
+            #print(f"batch loss = {train_loss}")
 
         epoch_loss = epoch_loss/len(loader)
 
