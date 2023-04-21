@@ -64,7 +64,7 @@ def main():
 
             #print(f"batch loss = {train_loss}")
 
-        epoch_loss = epoch_loss/len(loader)
+        epoch_loss = epoch_loss/len(train_loader)
 
         print(f"Epoch {epoch + 1}/{epochs}, Epoch loss = {epoch_loss}")
 

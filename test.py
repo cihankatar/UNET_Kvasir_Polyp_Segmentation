@@ -56,7 +56,7 @@ if __name__ == "__main__":
     
     train_loader,test_loader = loader(batch_size,num_workers,shuffle=True)
 
-    for batch in tqdm(test_loader, desc=f"batches in training", leave=False):
+    for batch in tqdm(test_loader, desc=f"testing", leave=False):
         images,labels   = batch                
         model_output    = model(images)
 
