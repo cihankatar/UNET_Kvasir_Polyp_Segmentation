@@ -27,7 +27,10 @@ def main():
     train_loader,test_loader = loader(batch_size,num_workers,shuffle=True)
     model     = UNET(n_classes).to(device)
     
-    #model.load_state_dict(torch.load(checkpoint_path, map_location=torch.device('cpu')))
+   # if torch.cuda.is_available():
+    #    model.load_state_dict(torch.load(checkpoint_path))
+    #else: 
+     #   model.load_state_dict(torch.load(checkpoint_path, map_location=torch.device('cpu')))
 
     optimizer = Adam(model.parameters(), lr=l_r)
     loss_function      = Dice_CE_Loss()
